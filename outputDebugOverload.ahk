@@ -142,6 +142,11 @@ GetNullMessage() {
     return appendMessage . additionalMessage
 }
 
+/**
+ * Final stringified format output we'll see in the Debug Console.
+ * @param {Any} val 
+ * @param {String} formatType 
+ */
 FormatValue(val, formatType := FORMAT_TYPES[2]) {
     strVal := Stringify(val)
 
