@@ -210,7 +210,7 @@ To see the debug output:
 - Run your script with a debugger attached in **VS Code** and check the **Debug Console**.
 - Use **DebugView** (Sysinternals) to capture `OutputDebug` messages system-wide.
 - Any tool that listens for `OutputDebug` events will receive the formatted lines.
-- I use VSCode with AHK++, so this it looks like this:
+- I use VSCode with AHK++, so it looks like this:
 <img width="1496" height="368" alt="image" src="https://github.com/user-attachments/assets/742289ff-4eb8-4d01-9fd7-51bb4515a312" />
 ^ Did you see that Runtime error too?! It's not in a MsgBox! Yeeeeeeeeeeeeeeeeeeeeeeeah boi!
 
