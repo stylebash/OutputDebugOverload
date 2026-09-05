@@ -103,7 +103,7 @@ outStrFormat(formatType, args, maxIdx) {
 WereDoingCustomLabels(args, maxIdx, formatType, returningData) {
     if args.Length > 1 && args.Has(maxIdx) && Type(args[maxIdx]) == "String" {
         lastArg := args[maxIdx]
-        if lastArg == FORMAT_TYPES[1] || lastArg == FORMAT_TYPES[2] || SubStr(lastArg, 1, 1) == ":" {
+        if ArrContains(lastArg, FORMAT_TYPES) || SubStr(lastArg, 1, 1) == ":" {
             formatType := Trim(lastArg, ":")
             maxIdx--
         }
@@ -115,6 +115,20 @@ WereDoingCustomLabels(args, maxIdx, formatType, returningData) {
         case 'maxIdx': 
             return maxIdx
     }
+}
+
+/**
+ * Checks if lookForThis exists in the array.
+ * Why something like this doesn't exist in AHK is beyond me.
+ * @param {Any} lookForThis as long as it's not an (object) data type
+ * @param {array} arr one dimensional array
+ * @returns {Boolean} but more line an integer in AHK.
+ */
+ArrContains(lookForThis, arr) {
+    for v in arr
+        if v == lookForThis
+            return true
+    return false
 }
 
 GetNullMessage() {
